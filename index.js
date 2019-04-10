@@ -27,11 +27,9 @@ app.use(GripSwitchRoutes);
 app.use(MaxDayRoutes);
 app.use(PushUpRoutes);
 
-//for local use:
-app.listen(3000, (err)=>{
-    if (err) {
-        return console.log("Error", err);
-      }
+//heroku handles PORT
+const port = process.env.PORT || 3001;
+app.listen(port, ()=>{
+  console.log('Listening on port:${port}');    
 })
 
-//heroku:
