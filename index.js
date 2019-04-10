@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
+dotenv.config();
 
-mongoose.connect("mongodb://roger:roger33@ds145573.mlab.com:45573/armstrong", {useNewUrlParser: true})
+mongoose.connect(process.env.mongodburi, {useNewUrlParser: true})
 
 const MaxEffortRoutes = require("./routes/MaxEffortRoutes");
 const PyramidRoutes = require("./routes/PyramidRoutes");
