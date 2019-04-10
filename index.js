@@ -9,7 +9,7 @@ mongoose.connect(process.env.mongodburi, {useNewUrlParser: true})
 
 const MaxEffortRoutes = require("./routes/MaxEffortRoutes");
 const PyramidRoutes = require("./routes/PyramidRoutes");
-const GripSwitchRoutes = require("./routes/GripswitchRoutes");
+const GripSwitchRoutes = require("./routes/GripSwitchRoutes");
 const MaxDayRoutes = require("./routes/MaxDayRoutes");
 const PushUpRoutes = require("./routes/PushUpRoutes");
 
