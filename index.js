@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const dotenv = require("dotenv");
 dotenv.config();
 
-mongoose.connect(process.env.mongodburi, {useNewUrlParser: true})
+mongoose.connect(process.env.dburi, {useNewUrlParser: true})
 
 const MaxEffortRoutes = require("./routes/MaxEffortRoutes");
 const PyramidRoutes = require("./routes/PyramidRoutes");
@@ -30,7 +30,5 @@ app.use(PushUpRoutes);
 //heroku handles PORT
 const port = process.env.PORT || 3001;
 app.listen(port, ()=>{
-  console.log('Listening');    
+  console.log('Listening');
 });
-
-
